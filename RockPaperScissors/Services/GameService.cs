@@ -18,7 +18,8 @@ namespace RockPaperScissors.Services
 
         public async Task<List<Game>> GetListAsync(bool onlyActiveGames)
         {
-            return await RepositoryBase.GetAsync(x => !onlyActiveGames || !x.IsFinished);
+            return await RepositoryBase.GetAsync(x => !onlyActiveGames || !x.IsFinished, 
+                nameof(Game.FirstPlayer), nameof(Game.SecondPlayer), nameof(Game.Winner));
         }
 
         public async Task<int> CreateGameAsync(User creater)

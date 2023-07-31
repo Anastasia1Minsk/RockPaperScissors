@@ -6,12 +6,11 @@ namespace RockPaperScissors.ModelsDto
     {
         public int Id { get; set; }
         public int FirstPlayerId { get; set; }        
-        public int FirstPlayerName { get; set; }
+        public string FirstPlayerName { get; set; }
         public int? SecondPlayerId { get; set; }
-        public int? SecondPlayerName { get; set; }
+        public string? SecondPlayerName { get; set; }
         public int? WinnerId { get; set; }
-        public int? WinnerName { get; set; }
+        public string? WinnerName { get; set; }
         public bool IsFinished { get; set; }
-        public Status Status { get; set; }
     }
 }
