@@ -79,5 +79,5 @@ Impossible to connect
 ```
 
 <h3>DB</h3>
-![image](https://github.com/Anastasia1Minsk/RockPaperScissors/assets/92824314/6fe0017d-7142-4eca-ae0d-1f6765c298da)
 
+![image](https://github.com/Anastasia1Minsk/RockPaperScissors/assets/92824314/1ff18ae9-a592-4e7d-abd5-5a78dd890058)
