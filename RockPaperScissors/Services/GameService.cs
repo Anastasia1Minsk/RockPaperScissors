@@ -43,6 +43,11 @@ namespace RockPaperScissors.Services
                 return false;
             }
 
+            if (game.SecondPlayerId != null)
+            {
+                return false;
+            }
+
             if (game.FirstPlayerId == secondPlayer.Id)
             {
                 return false;
@@ -93,39 +98,7 @@ namespace RockPaperScissors.Services
 
             return string.Empty;            
         }
-
-        /*public async Task<GameInfoDto> GetCurrentGameInfo(int gameId, int userId)
-        {
-            var game = await GetGameAsync(gameId);
-            var info = new GameInfoDto();
-            var rounds = await _roundService.GetListAsync(game.Id);
-            info.Rounds = rounds;
-            info.GameStatus = game.IsFinished switch
-            {
-                true when game.WinnerId == 0 => Status.Draw,
-                true when game.WinnerId == userId => Status.YouWon,
-                true when game.WinnerId != userId => Status.YouLost,
-                _ => Status.Continue
-            };
-
-            var currentRound = rounds.MaxBy(x => x.RoundNumber);
-            *//*if (currentRound.FirstPlayerFigure == null || currentRound.SecondPlayerFigure == null)
-            {
-                info.CurrentRoundStatus = Status.Continue;
-            }*//*
-
-            info.CurrentRoundStatus = currentRound.WinnerId switch
-            {
-                0 => Status.Draw,
-                userId => Status.YouWon,
-                _ => Status.YouLost
-            };
-        }*/
-
-
-
         
-
         private string PossibleToTurn(Game game, int userId)
         {
             if (game == null)
