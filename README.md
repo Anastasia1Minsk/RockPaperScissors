@@ -1,6 +1,6 @@
 # RockPaperScissors
 
-Web-API game RockPaperScissors
+<h1 align="center">Web-API game RockPaperScissors</h1>
 Project is made by means of .NET7, EF Core, AutoMapper. 
 Management system is Microsoft SQL Server.
 
